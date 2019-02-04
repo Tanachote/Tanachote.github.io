@@ -15,7 +15,24 @@ header {
     position: static;
     text-align: center;
     opacity: 0.8;
- }
+
+    animation-name: headanime;
+    animation-duration: 2s;
+}
+@keyframes headanime {
+  0%   {opacity: 0; left:1000px;}
+  10%   {opacity: 0.2; left:750px;}
+  20%   {opacity: 0.3; left:550px;}
+  30%   {opacity: 0.5; left:250px;}
+  40%   {opacity: 0.6; left:100px;}
+  50%   {opacity: 0.6; left:0px;}
+  60%   {opacity: 0.7; left:0px;}
+  70%   {opacity: 0.7; left:0px;}
+  80%   {opacity: 0.9; left:0px;}
+  90%   {opacity: 0.9; left:0px;}
+  100% {opacity: 1: left:0px;}
+}
+
 header h2 {
   background-color: lightblue;
 }
@@ -41,7 +58,17 @@ header h2 {
     margin-left: 600px;
     margin-right: 300px;
     border: dotted pink 5px;
+
+    animation-name: animedetail;
+    animation-duration: 5s;
  }
+ @keyframes animedetail {
+  0%   {opacity: 0;}
+  10%   {opacity: 0.2; }
+  20%   {opacity: 0.3;}
+  50%   {opacity: 0.7;}
+  100% {opacity: 1;}
+}
 
 .example {
     margin: 5px;
@@ -49,6 +76,16 @@ header h2 {
     margin-left: 600px;
     margin-right: 300px;
     border: dotted orange 5px;
+
+        animation-name: exampledetail;
+    animation-duration: 5s;
+}
+@keyframes exampledetail {
+  0%   {opacity: 0;}
+  10%   {opacity: 0.2; }
+  20%   {opacity: 0.3;}
+  50%   {opacity: 0.7;}
+  100% {opacity: 1;}
 }
 
 .example1 {
