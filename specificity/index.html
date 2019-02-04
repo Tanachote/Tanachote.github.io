@@ -1,0 +1,79 @@
+<!-- css-specificity.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Specificity</title>
+	<link rel="stylesheet" media="screen" href="style.css">
+</head>
+
+<body id="css-specificity">
+<div class=page>
+	<section class="page-intro">
+		<header role="banner">
+			<h1>
+				WHAT IS CSS-SPECIFICITY?
+			</h1>
+		</header>
+		<div class="summary">
+			CSS-Specificity คือสิ่งที่บ่งบอกถึงลำดับความสำคัญของ selecter เพื่อกำหนด style ให้กับแต่ละ element ที่จะให้แสดงผลบนหน้าเว็บ
+		</div>
+		<div class="details">
+			<header>
+				<h2>
+					การคำนวณค่า Specificity
+				</h2>
+			</header>
+			<article>
+				ในการคำนวณค่า Specificity นั้นจะขออนุญาตแบ่งประเภทการเขียน style ออกมาดังนี้โดยให้มองว่าในกลุ่มเดียวกันให้มีค่า specificity เท่ากัน
+				<br>
+				<p>
+					1) 1000 --มีค่า--> Inline style <br>
+					2) 100 ---มีค่า---> ID selectors <br>
+					3) 10 ----มีค่า---> Class selectors, Attributes selectors, Pseudo-classes <br>
+					4) 1 -----มีค่า----> Type selectors, Pseudo-elements <br>
+					5) 0 -----มีค่า----> Universal selector, Combinators, Negation pseudo-clas
+					<br>
+					<br>
+					ซึ่งถ้าเขียนแบบรูปด้านล่างจะได้ค่าดังนี้
+				</p>
+				<p>
+					<img src="pic05.png" alt="">
+					<br>
+					ด้วยเหตุนี้จึงทำให้บางครั้งแม้ว่าจะมีการอ่านโค้ดจากบนลงล่างแต่ก็จะเลือกทำตัวที่มีความสำคัญมากที่สุด
+				</p>
+
+			</article>
+
+		</div>
+		<div class="example">
+			<div class="example1">
+				<header>
+					<h3>
+						ตัวอย่าง
+					</h3>
+				</header>
+				<article>
+					<img src="pic01.png" alt="" width="500" height="400">
+					<br>
+					<p>ไฟล์ index.html 
+						<br>ที่มีการเชื่อมโยงกับ style2.css และ style1.css โดยจะเห็นว่าต่อให้มีการเขียน "ul li a" ทั้งใน 2 style แต่ไม่ถูกเลือกมาแสดงเนื่องจาก "ul li .active" มีความสำคัญกว่า</p>
+				</article>
+			</div>
+			<div class="example2">
+				<article>
+					<img src="pic02.png" alt="" width="500" height="400">
+					<br>
+					<p>
+						ไฟล์ home.html ที่มีการเชื่อมโยงกับ style1.css และ style2.css
+						<br>
+						โดยจะเห็นว่ามีการเรียกแบบตามลำดับโดยจะเลือก style1.css มาเนื่องจากค่าความสำคัญของตัวกำหนด style นั้นมีค่าเท่ากันและ style1.css คืออันที่ถูกเรียกหลัง style2.css
+
+					</p>
+				</article>
+			</div>
+		</div>
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+html{
+  font-family: 'Prompt', sans-serif;
+}
+
+header {
+  }
+  header h1 {
+    background: transparent url(https://images.pexels.com/photos/1242348/pexels-photo-1242348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat fixed;
+    padding: 130px;
+    color: black;
+    display: block;
+    font-size: 50px;
+    width: 96%;
+    height: 20px;
+    position: static;
+    text-align: center;
+    opacity: 0.8;
+ }
+header h2 {
+  background-color: lightblue;
+}
+ header h3 {
+  background-color: orange;
+  }
+
+ p {
+  /*font-family: 'Prompt', sans-serif;*/
+ }
+
+.summary {
+  position: absolute;
+  top: 290px;
+  left: 420px;
+}
+ .page-intro {
+  margin-right: 200px;
+ }
+  .details {
+    margin: 5px;
+    padding: 10px;
+    margin-left: 600px;
+    margin-right: 300px;
+    border: dotted pink 5px;
+ }
+
+.example {
+    margin: 5px;
+    padding: 10px;
+    margin-left: 600px;
+    margin-right: 300px;
+    border: dotted orange 5px;
+}
+
+.example1 {
+}
+
+.example2 {
+}
