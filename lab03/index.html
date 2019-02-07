@@ -2,61 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="style-lab03.css">
 </head>
 
 <body>
-    <header class="col-xs-2 col-lg-4">
-            <h1>HEADER1</h1><hr>
+    <header>
+            <h1>BNK48 MEMBERLIST</h1>
     </header>
     <div class="searchBar">
-        <input type="text" id="search" placeholder="Search field">
+
+        <input type="text" id="search" placeholder="Search...">
         <button type="button" id="searchBtn">search</button>
+
         <div class="advsearch">
             <input type="checkbox" id="advsearchCheckBox"> Advance Search<br>
         </div>
-        <hr>
     </div>
 
-    <div id="checkboxes" style="display: none;">
-        <input type="checkbox" id="chBoxN" name="name"> Name<br>
-        <input type="checkbox" id="chBoxLN" name="lastname"> Last Name<br>
-        <input type="checkbox" id="chBoxNN" name="nickname"> Nickname<br>
-        <input type="checkbox" id="chBoxDOB" name="dateOfBirth"> Date of Birth<br>
-        <input type="checkbox" id="chBoxP" name="province"> Province<br>
-        <input type="checkbox" id="chBoxH" name="height"> Height<br>
-        <input type="checkbox" id="chBoxBG" name="bloodGroup"> Blood Group<br>
+    <div class="advCheckbox" id="checkboxes" style="display: none;">
+        <input type="checkbox" id="chBoxN" name="name"> Name
+        <input type="checkbox" id="chBoxLN" name="lastname"> Lastname
+        <input type="checkbox" id="chBoxNN" name="nickname"> Nickname
+        <input type="checkbox" id="chBoxDOB" name="dateOfBirth"> Date of Birth
+        <input type="checkbox" id="chBoxP" name="province"> Province
+        <input type="checkbox" id="chBoxH" name="height"> Height
+        <input type="checkbox" id="chBoxBG" name="bloodGroup"> Blood Group
     </div>
 
-    <div class="container" #id="mainContainer">
-        <h2>TABLE</h2>
-        <div class="col-xs-2 col-lg-4">
-            <h3>C1</h3>
+
+    <div class="container">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <th>Name</th>
+                    <th>Lastname</th>
+                    <th>Nickname</th>
+                    <th>Date of Birth</th>
+                    <th>Height</th>
+                    <th>Province</th>
+                    <th>Blood Group</th>
+                </thead>
+                <tbody id="table">
+                </tbody>
+            </table>
         </div>
-        <div class="col-xs-2 col-lg-4">
-            <div class="row">
-                <table class="table table-striped">
-                    <thead>
-                        <th>Name</th>
-                        <th>LastName</th>
-                        <th>Nickname</th>
-                        <th>Date of Birth</th>
-                        <th>Height</th>
-                        <th>Province</th>
-                        <th>Blood Group</th>
-                    </thead>
-                    <tbody id="table">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="col-xs-2 col-lg-4">
-            <h3>C3</h3>
-        </div>
-        <hr>
+        
         <div class="footer">
-            <p>footer</p>
+            <h4>Reference</h4>
+            <p>www.bnk48.com</p>
+            <p>Create by Tanachote Chawanachote 5810450270</p>
         </div>
+
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -142,13 +138,13 @@
 
             function addDataRowToTable(element) {
                 $('#table').append('<tr>')
-                $('#table').append('<td>' + element.name + '</td>')
-                $('#table').append('<td>' + element.lastname + '</td>')
-                $('#table').append('<td>' + element.nickname + '</td>')
-                $('#table').append('<td>' + element.dateOfBirth + '</td>')
-                $('#table').append('<td>' + element.height + '</td>')
-                $('#table').append('<td>' + element.province + '</td>')
-                $('#table').append('<td>' + element.bloodGroup + '</td>')
+                $('#table').append('<td style="padding: 25px 10px 25px 10px; border: 1px solid #fbf0fa; border-radius: 10px;">' + element.name + '</td>')
+                $('#table').append('<td style="border: 1px solid #fbf0fa; border-radius: 5px;">' + element.lastname + '</td>')
+                $('#table').append('<td style="border: 1px solid #fbf0fa; border-radius: 5px;">' + element.nickname + '</td>')
+                $('#table').append('<td style="border: 1px solid #fbf0fa; border-radius: 5px;">' + element.dateOfBirth + '</td>')
+                $('#table').append('<td style="border: 1px solid #fbf0fa; border-radius: 5px;">' + element.height + ' cm</td>')
+                $('#table').append('<td style="border: 1px solid #fbf0fa; border-radius: 5px;">' + element.province + '</td>')
+                $('#table').append('<td style="border: 1px solid #fbf0fa; border-radius: 5px;">' + element.bloodGroup + '</td>')
                 $('#table').append('</tr>')
             }
         })
